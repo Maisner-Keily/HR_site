@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Файлы и папки операционной системы
 .DS_Store
 Thumbs.db
@@ -14,3 +15,9 @@ reports/
 
 # Папка с собранными файлами проекта
 # build/
+=======
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+>>>>>>> b826498d635aa10266b3b12efffcaaf3f0f2573f
