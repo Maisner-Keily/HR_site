@@ -1,0 +1,16 @@
+.callback.tab
+    .container
+        .callback__wrap.tab__wrap
+            .callback__title.tab__title(data-aos="fade-up" data-aos-once="true" data-aos-delay="200" data-aos-duration="600")
+                span Обратная 
+                    br
+                    | связь
+
+            .callback__content.tab__content(data-aos="fade-up" data-aos-once="true" data-aos-delay="200" data-aos-duration="600")
+                .callback__text Заполни форму и наши HR менеджеры свяжутся с тобой
+
+                form(action='#').callback__form#callback_form
+                    input(type='text' placeholder='Твое имя')
+                    input(type='text' placeholder='Email, телефон, любой другой канал связи')
+                    textarea(placeholder='Пару строк о себе')
+                    button(type='submit') Отправить
