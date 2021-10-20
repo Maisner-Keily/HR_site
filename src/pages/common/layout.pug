@@ -7,11 +7,13 @@ html(lang="ru")
             meta(content="width=device-width, initial-scale=1" name="viewport")
             meta(content="ie=edge" http-equiv="x-ua-compatible")
             link(rel="stylesheet" href="css/style.min.css")
-    body
+            link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    body#body
         block header
             include header
         block content
         block footer
             include footer
         block scripts
+            script(src="https://unpkg.com/aos@next/dist/aos.js")
             script(src='js/main.min.js')

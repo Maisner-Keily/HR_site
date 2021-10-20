@@ -3,3 +3,26 @@
 @import "common/header";
 
 @import "common/footer";
+
+.main_window {
+    min-height: 100vh;
+
+    &__wrap {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        span {
+            display: block;
+        }
+    }
+}

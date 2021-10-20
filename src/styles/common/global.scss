@@ -1,4 +1,6 @@
 @import "../../local_modules/normalize.css/normalize";
+@import '__nav.scss';
+@import '../utils/fonts.scss';
 
 *,
 *::before,
@@ -15,6 +17,8 @@ body {
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
+    background-color: #25242A;
+    color: #ffffff;
 }
 
 img {
@@ -23,11 +27,19 @@ img {
 
 a {
     text-decoration: none;
+    font-size: inherit;
+    color: inherit;
 }
 
 .container {
     display: block;
     width: 100%;
     margin: 0 auto;
-    max-width: 1184px;
+    max-width: 1250px;
+}
+
+.h1 {
+    font-size: 65px;
+    line-height: 166.5%;
+    font-weight: 300;
 }
