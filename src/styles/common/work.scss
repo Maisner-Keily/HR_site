@@ -1,0 +1,31 @@
+.work {
+    &__wrap {
+        padding-top: 215px;
+    }
+
+    &__title {
+        padding-bottom: 15px;
+
+        &::after {
+            content: '03';
+            bottom: 40px;
+        }
+    }
+
+    &__description {
+        max-width: 530px;
+        padding-left: 40px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 130px;
+    }
+
+    &__content {
+        padding-left: 0;
+    }
+}

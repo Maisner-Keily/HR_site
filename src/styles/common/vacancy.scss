@@ -1,0 +1,25 @@
+.vacancy {
+    margin-bottom: 100px;
+    width: 33%;
+    padding-left: 30px;
+
+    &__title {
+        font-size: 36px;
+        line-height: 35px;
+        font-weight: 500;
+        padding-bottom: 5px;
+    }
+
+    &:nth-child(4) {
+        margin-bottom: 0;
+    }
+    
+    &:nth-child(5) {
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        opacity: 0; !important
+    }
+
+}

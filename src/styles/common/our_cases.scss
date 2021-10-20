@@ -1,0 +1,39 @@
+.caseWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    max-height: 900px;
+    width: 100%;
+    margin: 0;
+}
+
+.our_cases {
+    width: 100%;
+    margin: 0 auto;
+
+    &__wrap {
+        width: 100%;
+        padding-top: 200px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 70%;
+        padding-left: 7.5%;
+        padding-right: 4%;
+    }
+
+    &__title {
+        padding-bottom: 115px;
+
+        &::after {
+            content: '02';
+            bottom: 195px;
+            left: 51%;
+        }
+    }
+}
