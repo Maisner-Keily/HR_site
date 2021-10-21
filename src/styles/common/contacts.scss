@@ -1,0 +1,133 @@
+.contacts {
+    width: 100%;
+
+    &__wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 180px;
+        padding-bottom: 125px;
+    }
+
+    &__title {
+        font-weight: 500;
+        margin-bottom: 55px;
+        display: block;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: -12px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__block {
+        padding-right: 150px;
+
+        &:last-child {
+            padding-right: 0;
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        li {
+            line-height: 45px;
+            display: block;
+        }
+    }
+
+    &__copyright {
+        line-height: 38px;
+    }
+}
+
+.map {
+    position: relative;
+
+    &__map {
+        max-width: 675px;
+        width: 100%;
+        max-height: 450px;
+        position: relative;
+        display: block;
+    
+    }
+}
+
+.point {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    transition: opacity 1s;
+
+    &__img {
+        width: 18px;
+        height: 24px;
+    }
+
+    &:hover {
+        .point__full {
+            opacity: 1;
+            display: flex;
+        }
+    }
+
+    &:first-child {
+        left: 12%;
+        top: 57%;
+
+        .point__full {
+            transform: translateX(100%);
+            border-bottom: 5px solid #671611;
+        }
+    }
+
+    &:last-child {
+        right: 11%;
+        top: 36%;
+
+        .point__full {
+            border-bottom: 5px solid #117E85;
+        }
+    }
+
+    &__full {
+        opacity: 0;
+        display: none;
+        width: 341px;
+        height: 87px;
+        border-radius: 10px 10px 0 0;
+        background: rgba(19, 19, 19, 0.69);
+        backdrop-filter: blur(11px);
+        padding: 23px 27px;
+        font-size: 14px;
+        line-height: 23px;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        right: 11%;
+        top: 36%;
+
+        &_img {
+            margin-right: 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+}
