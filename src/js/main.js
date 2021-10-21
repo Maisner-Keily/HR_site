@@ -5,6 +5,71 @@ $(document).ready(() => {
     console.log(`document ready`);
     AOS.init();
 
+    const deactivateLinkBg = list => {
+        list.forEach((item, index, array) => {
+            $(item).css('display', 'none');
+        })
+    }
+
+    $('#logo_link').click(() => {
+        $(window).scrollTop(0);
+    })
+
+    $('#about_link').click(() => {
+        $(window).scrollTop($('#about').offset().top + 10);
+    })
+
+    $('#our_cases_link').click(() => {
+        $(window).scrollTop($('#our_cases').offset().top + 10);
+    })
+
+    $('#work_link').click(() => {
+        $(window).scrollTop($('#work').offset().top + 10);
+    })
+
+    $('#callback_link').click(() => {
+        $(window).scrollTop($('#callback').offset().top + 10);
+    })
+
+    $('#contacts_link').click(() => {
+        $(window).scrollTop($('#contacts').offset().top + 10);
+    })
+
+    $(window).scroll(function() {
+        const links_list = ['#about_link_bg', '#our_cases_link_bg', '#work_link_bg', '#callback_link_bg', '#contacts_link_bg']
+        
+        if ($(window).scrollTop() < $('#about').offset().top) {
+            deactivateLinkBg(links_list);
+        }
+
+        else if ($(window).scrollTop() > $('#about').offset().top && $(window).scrollTop() < $('#our_cases').offset().top) {
+            console.log('12312')
+            deactivateLinkBg(links_list);
+            $('#about_link_bg').show();
+        }
+
+        else if ($(window).scrollTop() > $('#our_cases').offset().top && $(window).scrollTop() < $('#work').offset().top) {
+            deactivateLinkBg(links_list);
+            console.log('asdasdasd')
+            $('#our_cases_link_bg').show();
+        }
+
+        else if ($(window).scrollTop() > $('#work').offset().top && $(window).scrollTop() < $('#callback').offset().top) {
+            deactivateLinkBg(links_list);
+            $('#work_link_bg').show();
+        }
+
+        else if ($(window).scrollTop() > $('#callback').offset().top && $(window).scrollTop() < $('#callback_channel').offset().top) {
+            deactivateLinkBg(links_list);
+            $('#callback_link_bg').show();
+        }
+
+        else if ($(window).scrollTop() > $('#callback_channel').offset().top) {
+            deactivateLinkBg(links_list);
+            $('#contacts_link_bg').show();
+        }
+      });
+
     $('#callback_form').submit(e => {
         e.preventDefault();
         const name = $('#callback_name').val();

@@ -47,6 +47,10 @@
         li {
             line-height: 45px;
             display: block;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 

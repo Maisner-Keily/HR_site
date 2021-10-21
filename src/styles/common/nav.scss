@@ -8,9 +8,26 @@
 
     &>div {
         margin-right: 75px;
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         &:last-child {
             margin-right: 0;
         }
+    }
+
+    &__bg {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(35, 50, 184, 0.5);
+        filter: blur(23px);
+        border-radius: 5px;
     }
 }
