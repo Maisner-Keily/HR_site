@@ -10,7 +10,7 @@
                 .callback__text Заполни форму и наши HR менеджеры свяжутся с тобой
 
                 form(action='#').callback__form#callback_form
-                    input(type='text' placeholder='Твое имя')
-                    input(type='text' placeholder='Email, телефон, любой другой канал связи')
-                    textarea(placeholder='Пару строк о себе')
+                    input(type='text' placeholder='Твое имя')#callback_name
+                    input(type='text' placeholder='Email, телефон, любой другой канал связи')#callback_channel
+                    textarea(placeholder='Пару строк о себе')#callback_about
                     button(type='submit') Отправить
