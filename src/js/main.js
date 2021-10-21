@@ -34,6 +34,22 @@ $(document).ready(() => {
     $('#contacts_link').click(() => {
         $(window).scrollTop($('#contacts').offset().top + 10);
     })
+    
+    $('#logo_link_contacts').click(() => {
+        $(window).scrollTop(0);
+    })
+
+    $('#about_link_contacts').click(() => {
+        $(window).scrollTop($('#about').offset().top + 10);
+    })
+
+    $('#work_link_contacts').click(() => {
+        $(window).scrollTop($('#work').offset().top + 10);
+    })
+
+    $('#callback_link_contacts').click(() => {
+        $(window).scrollTop($('#callback').offset().top + 10);
+    })
 
     $(window).scroll(function() {
         const links_list = ['#about_link_bg', '#our_cases_link_bg', '#work_link_bg', '#callback_link_bg', '#contacts_link_bg']

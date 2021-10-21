@@ -9,10 +9,11 @@
     left: 0;
     top: 0;
     background: inherit;
+    opacity: 0.9;
+    backdrop-filter: blur(19px);
 
     &__wrap {
         width: 100%;
-        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -21,8 +22,8 @@
 
 .logo {
     position: absolute;
-    left: 0; 
-    top: 18px;
-    transform: translateY(-50%);
+    left: 10%; 
+    top: 40px;
+    transform: translateY(-30%);
     display: block;
 }
