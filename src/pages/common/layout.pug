@@ -10,10 +10,10 @@ html(lang="ru")
             link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
     body#body
         img(src="img/bgg_feedback.png", alt="bg_grad")
-        .telegram
+        .telegram#tg
             img(src="img/Telegram.png", alt="telegram")
 
-        .telegramFull
+        .telegramFull#tgFull
             .hr
                 .resipients
                     .resipient
@@ -31,7 +31,7 @@ html(lang="ru")
                 span HR manager Виталя
                 .telegramFull__buttons
                     button.telegramFull__send(type='button') Написать в Telegram
-                    button.telegramFull__noTelegram(type='button') У меня нет Telegram’а
+                    button.telegramFull__noTelegram(type='button')#noTg У меня нет Telegram’а
 
         block header
             include header

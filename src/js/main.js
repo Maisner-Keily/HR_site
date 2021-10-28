@@ -18,6 +18,16 @@ $(document).ready(() => {
     $('#burger').click(() => { 
         $('#navMobile').css('display','flex');
     })
+
+    $('#tg').click(() => { 
+        $('#tgFull').toggle('slow');
+        $('#tg').toggleClass('tg-active');
+    })
+
+    $('#noTg').click(() => { 
+        $('#tgFull').hide();
+        $(window).scrollTop($('#callback').offset().top + 10);
+    })
     
     $('#logo_link').click(() => {
         $(window).scrollTop(0);
