@@ -1,5 +1,6 @@
 .main_window {
     min-height: 100vh;
+    position: relative;
 
     @media screen and (max-width: 500px) {
         min-height: none;
@@ -16,10 +17,21 @@
             flex-direction: column;
             justify-content: center;
         }
+
+        &>img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-height: 200%;
+            z-index: -1;
+
+            @media screen and (max-width: 768px) {
+                transform: translateY(-10%);
+            }
+        }
     }
 
     &__title {
-
         &_wrapper {
             display: flex;
             flex-direction: column;

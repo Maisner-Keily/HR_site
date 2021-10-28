@@ -21,6 +21,25 @@ body {
     background-color: #25242A;
     color: #ffffff;
     position: relative;
+
+    &>img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-height: 150%;
+        z-index: -1;
+
+        @media screen and (max-width: 768px) {
+            max-width: none;
+            width: 100%;
+            bottom: 17%;
+        }
+
+        @media screen and (max-width: 500px) {
+            bottom: 17%;
+            width: 200%;
+        }
+    }
 }
 
 img {

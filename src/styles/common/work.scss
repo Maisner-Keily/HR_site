@@ -1,5 +1,10 @@
 .work {
+    width: 100%;
+    position: relative;
+
     &__wrap {
+        width: 100%;
+        margin: 0 auto;
         padding-top: 215px;
 
         @media screen and (max-width: 1050px) {
@@ -8,6 +13,20 @@
 
         @media screen and (max-width: 500px) {
             padding-top: 105px;
+        }
+
+        &>img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            max-height: 175%;
+            z-index: -1;
+
+            @media screen and (max-width: 500px) {
+                max-height: 225%;
+                width: 200%;
+                max-width: none;
+            }
         }
     }
 

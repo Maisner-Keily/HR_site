@@ -1,5 +1,6 @@
 .contacts {
     width: 100%;
+    position: relative;
 
     &__wrap {
         width: 100%;
@@ -18,6 +19,19 @@
 
         @media screen and (max-width: 1050px) {
             padding-top: 100px;
+        }
+
+        &>img {
+            position: absolute;
+            bottom: 0;
+            max-height: 100%;
+            z-index: -1;
+        }
+    }
+
+    &__bgg2 {
+        @media screen and (max-width: 500px) {
+            display: none;
         }
     }
 

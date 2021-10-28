@@ -92,7 +92,6 @@ $(document).ready(() => {
         }
 
         else if ($(window).scrollTop() > $('#about').offset().top && $(window).scrollTop() < $('#our_cases').offset().top) {
-            console.log('12312')
             deactivateLinkBg(links_list);
             $('#about_link_bg').show();
         }
