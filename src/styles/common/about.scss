@@ -1,10 +1,19 @@
 .about {
     &__wrap {
         padding-top: 90px;
+
+        @media screen and (max-width: 1050px) {
+            padding-top: 70px;
+        }
     }
 
     &__text {
         max-width: 420px;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            max-width: none;
+        }
 
         ul {
             padding-top: 20px;
@@ -25,15 +34,64 @@
         flex-direction: row;
         justify-content: space-between;
 
+        &:first-child {
+            @media screen and (max-width: 1170px) {
+                flex-direction: column;
+            }
+
+            @media screen and (max-width: 1050px) {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about__text {
+                @media screen and (max-width: 1170px) {
+                    margin-bottom: 80px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
         &:last-child {
             align-items: flex-end;
             margin-top: 130px;
+
+            @media screen and (max-width: 1050px) {
+                margin-top: 60px;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 40px;
+            }
         }
     }
 
     &__point {
         width: 30%;
         padding-right: 10px;
+
+        @media screen and (max-width: 768px) {
+            width: 70%;
+            margin-bottom: 67px;
+
+            .about__point:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 100%;
+        }
 
         span {
             display: block;
@@ -47,13 +105,33 @@
     &__title {
         padding-bottom: 115px;
 
-        &::after {
-            content: '01';
-            bottom: -7.5px;
+        @media screen and (max-width: 1050px) {
+            padding-bottom: 50px; 
+        }
+        
+        @media screen and (max-width: 768px) {
+            padding-bottom: 40px;
+        }
+        
+        @media screen and (max-width: 500px) {
+            padding-bottom: 20px;
         }
 
         &::after {
+            content: '01';
             bottom: 135px;
+
+            @media screen and (max-width: 1050px) {
+                bottom: 85px;
+            }
+
+            @media screen and (max-width: 768px) {
+                bottom: 75px;
+            }
+
+            @media screen and (max-width: 500px) {
+                bottom: 50px;
+            }
         }
     }
 }

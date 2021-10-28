@@ -41,15 +41,168 @@ ul {
     display: block;
     width: 100%;
     margin: 0 auto;
-    max-width: 1250px;
+    max-width: 1290px;
+    padding: 0 20px;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 25px;
+    }
 }
 
 .h1 {
     font-size: 65px;
     line-height: 166.5%;
     font-weight: 300;
+
+    @media screen and (max-width: 768px) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width: 630px) {
+        font-size: 45px;
+    }
+
+    @media screen and (max-width: 550px) {
+        font-size: 40px;
+    }
 }
 
 .bold {
     font-weight: 700;
+}
+
+.telegram {
+    display: block;
+    width: 67px;
+    height: 67px;
+    position: fixed;
+    right: 10%;
+    z-index: 11;
+    bottom: 10%;
+    cursor: pointer;
+    background-color: #0a64b7;
+    border-radius: 50%;
+
+    @media screen and (max-width: 1050px) {
+        bottom: 7%;
+        right: 7%;
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: 5%;
+        right: 7%;
+    }
+
+    &::before {
+        content: 'X';
+        font-size: 30px;
+        display: none;
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+.telegramFull {
+    width: 380px;
+    height: 224px;
+    position: fixed;
+    right: 10%;
+    z-index: 10;
+    bottom: 10%;
+    transform: translateY(-37px);
+    display: none;
+
+    &__content {
+        height: 182px;
+        background-color: #282730;
+        border-radius: 9px;
+
+        button {
+            width: 203px;
+            height: 34px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        span {
+            display: block;
+            padding: 20px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    &__send {
+        background-color: #0A64B7;
+        border: none;
+        margin-bottom: 18px;
+    }
+
+    &__noTelegram {
+        background-color: inherit;
+        border: 2px solid #0A64B7;
+    }
+}
+
+.hr {
+    display: flex;
+    flex-direction: row;
+    transform: translateY(10px);
+
+    &__text {
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        flex-direction: row;
+        padding: 15px 0 15px 15px;
+        background-color: #3F3D4B;
+        width: 100%;
+        max-width: 230px;
+        border-radius: 4px; 
+        position: absolute;
+        top: -50px;
+        right: 0;
+        z-index: -1;
+        transform: translateZ(-14px);
+
+        &::before {
+            content: url('../img/hr_arrow.png');
+            display: block;
+            margin-right: 10px;
+        }
+    }
+}
+
+.resipients {
+    display: flex;
+    flex-direction: row;
+}
+
+.resipient {
+    position: absolute;
+    top: -53px;
+    left: 40px;
+    z-index: -1;
+    cursor: pointer;
+
+    &:first-child {
+        left: 0;
+        z-index: 10 !important;
+    }
+
+    &:last-child {
+        left: 80px;
+    }
 }

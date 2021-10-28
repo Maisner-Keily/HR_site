@@ -3,6 +3,7 @@ import $ from '../local_modules/jquery/dist/jquery.min'
 $(document).ready(() => {
     // eslint-disable-next-line no-console
     console.log(`document ready`);
+    $('#navMobile').hide();
     AOS.init();
 
     const deactivateLinkBg = list => {
@@ -11,6 +12,15 @@ $(document).ready(() => {
         })
     }
 
+    $('#nav_close').click(() => { 
+        $('#navMobile').hide();
+
+    })
+
+    $('#burger').click(() => { 
+        $('#navMobile').show();
+    })
+    
     $('#logo_link').click(() => {
         $(window).scrollTop(0);
     })
