@@ -3,7 +3,6 @@ import $ from '../local_modules/jquery/dist/jquery.min'
 $(document).ready(() => {
     // eslint-disable-next-line no-console
     console.log(`document ready`);
-    $('#navMobile').hide();
     AOS.init();
 
     const deactivateLinkBg = list => {
@@ -17,7 +16,7 @@ $(document).ready(() => {
     })
 
     $('#burger').click(() => { 
-        $('#navMobile').show();
+        $('#navMobile').css('display','flex');
     })
     
     $('#logo_link').click(() => {
@@ -41,6 +40,31 @@ $(document).ready(() => {
     })
 
     $('#contacts_link').click(() => {
+        $(window).scrollTop($('#contacts').offset().top + 10);
+    })
+
+    $('#about_link-m').click(() => {
+        $('#navMobile').hide();
+        $(window).scrollTop($('#about').offset().top + 10);
+    })
+
+    $('#our_cases_link-m').click(() => {
+        $('#navMobile').hide();
+        $(window).scrollTop($('#our_cases').offset().top + 10);
+    })
+
+    $('#work_link-m').click(() => {
+        $('#navMobile').hide();
+        $(window).scrollTop($('#work').offset().top + 10);
+    })
+
+    $('#callback_link-m').click(() => {
+        $('#navMobile').hide();
+        $(window).scrollTop($('#callback').offset().top + 10);
+    })
+
+    $('#contacts_link-m').click(() => {
+        $('#navMobile').hide();
         $(window).scrollTop($('#contacts').offset().top + 10);
     })
     
