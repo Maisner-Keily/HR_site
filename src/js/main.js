@@ -14,7 +14,6 @@ $(document).ready(() => {
 
     $('#nav_close').click(() => { 
         $('#navMobile').hide();
-
     })
 
     $('#burger').click(() => { 
